@@ -1,0 +1,3 @@
+[submodule "socialscraper"]
+	path = socialscraper
+	url = git@github.com:alpaca/socialscraper.git
