@@ -39,13 +39,13 @@ def save_page(result, session, log=True):
 
     return page
 
-def get_scraper():
+def get_scraper(with_api=False):
     scraper_type = "nograph"
     if not os.path.isfile('facebook_scraper.pickle'):
         scraper = FacebookScraper(scraper_type=scraper_type)
         scraper.add_user(email=os.getenv('FACEBOOK_EMAIL'), password=os.getenv('FACEBOOK_PASSWORD'))
         scraper.login()
-        # scraper.init_api()
+        if with_api: scraper.init_api()
         pickle.dump(scraper, open('facebook_scraper.pickle', 'wb'))
     else:
         scraper = pickle.load(open('facebook_scraper.pickle', 'rb'))
@@ -60,6 +60,6 @@ def status_users(session):
     print "skip", session.query(FacebookUser).filter(FacebookUser.data.like("skip%")).count()
     print "in progress", session.query(FacebookUser).filter(FacebookUser.data.like("in progress%")).count()
 
-    friend_counts = [user.friends.count() for user in session.query(FacebookUser).filter(FacebookUser.data == "done").all()]
-    print friend_counts
+    # friend_counts = [user.friends.count() for user in session.query(FacebookUser).filter(FacebookUser.data == "done").all()]
+    # print friend_counts
     # print map(lambda x: filter(lambda y: y > x * 100 and y < (x + 1) * 100, friend_counts), (1:15))

@@ -9,7 +9,7 @@ q = Queue(connection=Redis())
 from get_friends import get_friends
 
 # incomplete_students = session.query(FacebookUser).filter(FacebookUser.data=="in progress").all()
-todo_students = session.query(FacebookUser).filter(FacebookUser.data=="todo").filter("username ~ '[a-zA-Z]+'").all()
+todo_students = session.query(FacebookUser).filter(FacebookUser.data=="todo").all()
 
 # session.query(FacebookUser).filter("username ~ '^\d+$'").count()
 # session.query(FacebookUser).filter("username ~ '[a-zA-Z]+'").count()

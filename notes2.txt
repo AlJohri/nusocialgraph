@@ -1,0 +1,10 @@
+{
+id: "827666",
+first_name: "Bernie",
+last_name: "Beckerman",
+link: "https://www.facebook.com/app_scoped_user_id/10103416770730869/",
+name: "Bernie Beckerman",
+updated_time: "2014-06-08T00:47:18+0000"
+}
+
+investigate app_scoped_user_id further

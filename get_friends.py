@@ -27,10 +27,12 @@ def get_friends(username=None):
 		session.commit()
 
 	fan.data = "done"
+	fan_friends_count = fan.friends.count()
+
 	session.commit()
 	session.close()
 
-	return "downloaded %d friends for %s" % (fan.friends.count(), fan.username)
+	return "downloaded %d friends for %s" % (fan_friends_count, fan.username)
 
 # try:
 # 	# requests.get('asdfasdf')
