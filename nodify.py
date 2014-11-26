@@ -1,5 +1,3 @@
-import os, sys; sys.path.append(os.path.abspath('./socialscraper'))
-
 import json
 from json import JSONEncoder
 from itertools import combinations

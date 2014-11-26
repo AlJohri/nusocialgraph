@@ -1,12 +1,30 @@
+Flask==0.10.1
+Jinja2==2.7.3
+MarkupSafe==0.23
+SQLAlchemy==0.9.0
+Werkzeug==0.9.6
+amqp==1.4.6
+anyjson==0.3.3
+arrow==0.4.4
 beautifulsoup4==4.3.2
+billiard==3.3.0.19
+celery==3.1.7
 cssselect==0.9.1
 enum34==0.9.23
-facebook-sdk==0.4.0
+-e git+https://github.com/pythonforfacebook/facebook-sdk.git#egg=facebook_sdk-master
+itsdangerous==0.24
+kombu==3.0.24
 lxml==3.3.5
 mechanize==0.2.5
+psycopg2==2.5.4
 python-dateutil==2.2
+pytz==2014.9
+redis==2.10.3
 requests==2.3.0
+rq==0.4.6
+rq-dashboard==0.3.4
+simplejson==3.6.5
 six==1.6.1
+-e git+https://github.com/AlJohri/socialscraper.git#egg=socialscraper-master
+times==0.7
 wsgiref==0.1.2
-SQLAlchemy==0.9.0
-celery==3.1.7

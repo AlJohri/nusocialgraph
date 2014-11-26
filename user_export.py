@@ -1,5 +1,3 @@
-import os, sys; sys.path.append(os.path.abspath('./socialscraper'))
-
 import csv
 from models import Session, FacebookUser
 

@@ -1,5 +1,3 @@
-import os, sys; sys.path.append(os.path.abspath('./socialscraper'))
-
 import pickle, logging, datetime, pickle, requests, csv
 from models import Session, FacebookUser, FacebookGroup, SuperGroup
 from sqlalchemy import func
