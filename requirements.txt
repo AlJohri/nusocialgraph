@@ -28,3 +28,7 @@ six==1.6.1
 -e git+https://github.com/AlJohri/socialscraper.git#egg=socialscraper-master
 times==0.7
 wsgiref==0.1.2
+python-louvain==0.3
+networkx==1.9.1
+pygraphviz==1.2
+python-igraph==0.7

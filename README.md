@@ -18,6 +18,12 @@ pg_restore -Fc -d nusocialgraph latest.dump.bak
 
 ```
 brew install graphviz
+brew install igraph
+http://stackoverflow.com/a/16166290/1667241
+export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig:$PKG_CONFIG_PATH
+https://github.com/yyuu/pyenv/issues/16#issuecomment-17818298
+http://cairographics.org/pycairo/
+http://stackoverflow.com/a/25903802/1667241
 ```
 
 ```

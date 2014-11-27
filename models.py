@@ -6,7 +6,7 @@ from sqlalchemy import Column, Integer, String, DateTime, ForeignKey
 from sqlalchemy.orm import relationship, backref
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import func
-from sqlalchemy.orm import aliased
+from sqlalchemy.orm import aliased, load_only
 
 from pprint import pprint as pp
 
