@@ -1,3 +1,10 @@
+Setup
+```
+wget https://s3.amazonaws.com/al-johri/latest.dump.bak
+dropdb nusocialgraph; createdb nusocialgraph
+pg_restore -Fc -d nusocialgraph latest.dump.bak
+```
+
 ```
 # http://postgresguide.com/utilities/backup-restore.html
 psql -d nusocialgraph -c "SELECT uid1, uid2 FROM facebook_friends" -o 'edgelist.csv' -F ',' -A --pset footer
@@ -13,7 +20,6 @@ SELECT COUNT(DISTINCT(ff.uid1)) from facebook_friends ff LEFT OUTER JOIN faceboo
 ```
 
 ```
-pg_restore -Fc -d nusocialgraph latest.dump.bak
 ```
 
 ```
