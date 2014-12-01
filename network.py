@@ -6,7 +6,7 @@ from networkx.readwrite import json_graph
 
 print "Loading network from edglist.csv"
 
-with open("edgelist_user.txt") as f:
+with open("edgelist_nu.txt") as f:
 	G=nx.read_edgelist(f, nodetype=long)
 
 print "Calculating number of nodes, edges, and degree"
@@ -35,8 +35,8 @@ print nx.info(sg)
 # print nx.diameter(sg)
 # print nx.algorithms.distance_measures.center(G)
 
-part = community.best_partition(sg)
+part = community.best_partition(sg) # part is a dict of the partition for each node
 values = [part.get(node) for node in sg.nodes()]
-
 nx.draw_spring(sg, cmap = plt.get_cmap('jet'), node_color = values, node_size=30, with_labels=False)
+
 plt.show()
