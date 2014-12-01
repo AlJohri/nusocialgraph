@@ -15,3 +15,9 @@ nodes.txt:
 
 edges.txt:
 	psql -d nusocialgraph -c "`cat edges.sql`" -o '$@' -F ' ' -A --pset footer --pset tuples_only
+
+num_friends.csv:
+	psql -d nusocialgraph -c "`cat num_friends.sql`" -o '$@' -F ',' -A --pset footer --pset tuples_only
+
+num_nu_friends.csv:
+	psql -d nusocialgraph -c "`cat num_nu_friends.sql`" -o '$@' -F ',' -A --pset footer --pset tuples_only
