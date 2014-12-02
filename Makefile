@@ -3,6 +3,26 @@ edgelist_nu.txt:
 nodes_nu.txt:
 	psql -d nusocialgraph -c "SELECT uid, name FROM facebook_users fu WHERE fu.nu = 1;" -o '$@' -F ' ' -A --pset footer --pset tuples_only
 
+edgelist_2015.txt:
+	psql -d nusocialgraph -c "`cat edgelist_2015.sql`" -o '$@' -F ' ' -A --pset footer --pset tuples_only
+nodes_2015.txt:
+	psql -d nusocialgraph -c "`cat nodes_2015.sql`" -o '$@' -F ' ' -A --pset footer --pset tuples_only
+
+edgelist_cultural.txt:
+	psql -d nusocialgraph -c "`cat edgelist_cultural.sql`" -o '$@' -F ' ' -A --pset footer --pset tuples_only
+nodes_cultural.txt:
+	psql -d nusocialgraph -c "`cat nodes_cultural.sql`" -o '$@' -F ' ' -A --pset footer --pset tuples_only
+
+edgelist_asian.txt:
+	psql -d nusocialgraph -c "`cat edgelist_asian.sql`" -o '$@' -F ' ' -A --pset footer --pset tuples_only
+nodes_asian.txt:
+	psql -d nusocialgraph -c "`cat nodes_asian.sql`" -o '$@' -F ' ' -A --pset footer --pset tuples_only
+
+edgelist_eecs.txt:
+	psql -d nusocialgraph -c "`cat edgelist_eecs.sql`" -o '$@' -F ' ' -A --pset footer --pset tuples_only
+nodes_eecs.txt:
+	psql -d nusocialgraph -c "`cat nodes_eecs.sql`" -o '$@' -F ' ' -A --pset footer --pset tuples_only
+
 edgelist_cs.txt:
 	psql -d nusocialgraph -c "`cat edgelist_cs.sql`" -o '$@' -F ' ' -A --pset footer --pset tuples_only
 nodes_cs.txt:
@@ -18,6 +38,10 @@ edgelist_greek.txt:
 nodes_greek.txt:
 	psql -d nusocialgraph -c "`cat nodes_greek.sql`" -o '$@' -F ' ' -A --pset footer --pset tuples_only
 
+edgelist_residences.txt:
+	psql -d nusocialgraph -c "`cat edgelist_residences.sql`" -o '$@' -F ' ' -A --pset footer --pset tuples_only
+nodes_residences.txt:
+	psql -d nusocialgraph -c "`cat nodes_residences.sql`" -o '$@' -F ' ' -A --pset footer --pset tuples_only
 
 
 num_friends.csv:

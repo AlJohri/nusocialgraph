@@ -4,10 +4,10 @@ from colors import colors, hex_to_rgb, rgbs
 # http://igraph.org/python/doc/igraph.GraphBase-class.html
 
 import igraph
-g = igraph.Graph.Read_Ncol('edgelist_greek.txt', directed=False)
+g = igraph.Graph.Read_Ncol('edgelist_cultural.txt', directed=False)
 
 mapping = {}
-with open("nodes_greek.txt") as f:
+with open("nodes_cultural.txt") as f:
 	for row in f.read().splitlines():
 		mapping[row.split()[0]] = row.decode('utf-8', 'ignore').encode('ascii', 'ignore')
 
@@ -17,8 +17,8 @@ g.simplify()
 igraph.summary(g)
 # http://stackoverflow.com/questions/9471906/what-are-the-differences-between-community-detection-algorithms-in-igraph
 # comms = g.community_edge_betweenness(directed=False).as_clustering()
-comms = g.community_fastgreedy().as_clustering()
-# comms = g.community_infomap()
+# comms = g.community_fastgreedy().as_clustering()
+comms = g.community_infomap()
 # comms = g.community_label_propagation().as_clustering()
 # comms = g.community_leading_eigenvector().as_clustering()
 # comms = g.community_multilevel() # louvain

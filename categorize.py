@@ -24,9 +24,9 @@ def get_groups(dl=False):
 groups = get_groups(True)
 
 for group_id, name, num_members, privacy, new_name, category in groups:
-	
+
 	group = session.query(FacebookGroup).filter(FacebookGroup.group_id == int(group_id)).first()
-	
+
 	super_group_parent = session.query(SuperGroup).filter(SuperGroup.name == category).first()
 	if not super_group_parent:
 		super_group_parent = SuperGroup(name=category)
