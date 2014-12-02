@@ -1,0 +1,35 @@
+{
+    "type": "network",
+    "data": "data/facebook.gexf",
+    "version": "1.0",
+    "logo": {
+        "file": "images/mozfest.png",
+        "link": "http://www.oii.ox.ac.uk/",
+        "text": "Oxford Internet Institute"
+    },
+    "text": {
+        "title": "Visualizing Your Facebook Network",
+        "intro": "Hover over a node to see its name and highlight its connections. Click on a node to induce a subgraph with its connections and see its attributes in detail. You can search for specific nodes below, as well as see each group in isolation. This tool was originally created by <a href='https://twitter.com/oiioxford'>@OIIOxford</a> for its InteractiveVis project, and was adapted for <a href='https://twitter.com/mozfest'>@MozFest</a> by <a href='https://twitter.com/allgonematthong'>@AllGoneMattHong</a>.",
+        "more": "<h3>Description</h3><p>In Internet research, the sheer volume of data available can be overwhelming; however, its variety and scale also offer exciting opportunities for finding new ways to answer old questions. Social network analysis is well-suited to probing the nature and extent of the various ways we now relate to each other online. Visualising data can reveal patterns not immediately apparent in data.</p><p>This network graph shows the relationships between your Facebook friends. Hover over a node to see its name and highlight its connections. Click on a node to induce a subgraph with its connections and see its attributes in detail. You can search for specific nodes below, as well as see each group in isolation. This tool was originally created by <a href='https://twitter.com/oiioxford'>@OIIOxford</a> for its InteractiveVis project, and was adapted for <a href='https://twitter.com/mozfest'>@MozFest</a> by <a href='https://twitter.com/allgonematthong'>@AllGoneMattHong</a>.</p><h3>Data and Visualization</h3><p>Data was collected using <a href='https://apps.facebook.com/netvizz/''>Netvizz</a> and laid out with <a href='https://networkx.github.io/'>NetworkX</a>, using a <a href='ftp://ftp.mathe2.uni-bayreuth.de/axel/papers/reingold:graph_drawing_by_force_directed_placement.pdf'>force-directed algorithm</a> devised by T.M.J. Fruchterman and E.M. Reingold to move highly connected nodes close together and less connected nodes further apart. The colours represent different communities found by a <a href='http://www.ece.unm.edu/ifis/papers/community-moore.pdf'>community detection algorithm</a> devised by Aaron Clauset, M.E.J. Newman, and Cristopher Moore. The interactive display is created with the <a href=\"http://sigmajs.org/\">Sigma.js library</a>, JavaScipt, and CSS based on an earlier interface by Greenpeace.</p> <p>Please note that this is an experimental visualization that may not work on all browsers. It has been tested to work on Firefox 12, Chrome 18, Android Ice Cream Sandwich and Jelly Bean, and iPad 2.</p>"
+    },
+    "legend": {
+        "nodeLabel": "A Facebook profile",
+        "edgeLabel": "A mutual friendship between two profiles",
+        "colorLabel": "Colour represents an automatic grouping of users according to who they are most connected to."
+    },
+    "features": {
+        "search": true,
+        "hoverBehavior": "dim",
+        "groupSelectorAttribute": "color"
+    },
+    "informationPanel": {
+        "groupByEdgeDirection": false,
+        "imageAttribute": false
+    },
+    "sigma":{
+        "graphProperties":{
+            "maxNodeSize": 3,
+            "minNodeSize": 3
+        }
+    }
+}

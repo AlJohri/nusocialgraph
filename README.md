@@ -40,3 +40,11 @@ https://github.com/yyuu/pyenv/issues/16#issuecomment-17818298
 http://cairographics.org/pycairo/
 http://stackoverflow.com/a/25903802/1667241
 ```
+
+Queries
+```
+>>> nu = session.query(FacebookUser).filter(FacebookUser.nu == 1).all()
+>>> len(nu)
+15881
+>>> nu_todo = [user for user in nu if user.all_friends.count() < 10]
+```
