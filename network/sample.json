@@ -1,0 +1,35 @@
+{
+    "type": "network",
+    "data": "",
+    "version": "1.0",
+    "logo": {
+        "file": "",
+        "link": "",
+        "text": "nusocialgraph"
+    },
+    "text": {
+        "title": "",
+        "intro": "Hover over a node to see its name and highlight its connections. Click on a node to induce a subgraph with its connections and see its attributes in detail. You can search for specific nodes below, as well as see each group in isolation. This tool was originally created by <a href='https://twitter.com/oiioxford'>@OIIOxford</a> for its InteractiveVis project.",
+        "more": ""
+    },
+    "legend": {
+        "nodeLabel": "A Facebook profile",
+        "edgeLabel": "A mutual friendship between two profiles",
+        "colorLabel": "Colour represents an automatic grouping of users according to who they are most connected to."
+    },
+    "features": {
+        "search": true,
+        "hoverBehavior": "dim",
+        "groupSelectorAttribute": "color"
+    },
+    "informationPanel": {
+        "groupByEdgeDirection": false,
+        "imageAttribute": false
+    },
+    "sigma":{
+        "graphProperties":{
+            "maxNodeSize": 3,
+            "minNodeSize": 3
+        }
+    }
+}

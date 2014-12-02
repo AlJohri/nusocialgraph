@@ -1,9 +1,15 @@
-import json
+import json, os
 from colors import colors, hex_to_rgb, rgbs
 
 # http://igraph.org/python/doc/igraph.GraphBase-class.html
 
-KEYWORD = "cultural"
+KEYWORD = "asian"
+
+if os.path.isfile('edgelist_%s.txt' % KEYWORD): os.remove('edgelist_%s.txt' % KEYWORD)
+if os.path.isfile('nodes_%s.txt' % KEYWORD): os.remove('nodes_%s.txt' % KEYWORD)
+
+os.system('make edgelist_%s.txt' % KEYWORD)
+os.system('make nodes_%s.txt' % KEYWORD)
 
 import igraph
 g = igraph.Graph.Read_Ncol('edgelist_%s.txt' % KEYWORD, directed=False)
@@ -18,15 +24,6 @@ igraph.summary(g)
 g.simplify()
 igraph.summary(g)
 # http://stackoverflow.com/questions/9471906/what-are-the-differences-between-community-detection-algorithms-in-igraph
-
-# expect to see
-# - CSA/TASC
-# - KASA
-# - SASA
-# - Brown Sugar
-# - Soul4Real
-# - MCSA
-# - Mariachi
 
 # comms = g.community_edge_betweenness(directed=False).as_clustering() # TOO SLOW
 # comms = g.community_fastgreedy().as_clustering() # 4
@@ -59,11 +56,9 @@ G = nx.read_gml('graph.gml')
 for node in G.nodes(data=True):
 	node[1]['viz'] = eval(node[1]['viz'])
 print "write to gefx from networkx"
-nx.write_gexf(G, './network/data/facebook_%s.gexf' % KEYWORD)
+nx.write_gexf(G, './network/data/%s.gexf' % KEYWORD)
+config = json.load(open("./network/sample.json"))
+config['data'] = 'data/%s.gexf' % KEYWORD
+json.dump(config, open('./network/data/%s.json' % KEYWORD, 'w'))
 
-print "server started"
-import SimpleHTTPServer
-import SocketServer
-Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
-httpd = SocketServer.TCPServer(("", 8000), Handler)
-httpd.serve_forever()
+print "done!"
