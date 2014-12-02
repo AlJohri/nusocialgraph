@@ -68,6 +68,7 @@ print "write to gefx from networkx"
 nx.write_gexf(G, './network/data/%s.gexf' % KEYWORD)
 config = json.load(open("./network/sample.json"))
 config['data'] = 'data/%s.gexf' % KEYWORD
+config['logo']['text'] = "nusocialgraph - %s" % KEYWORD.title()
 config['text']['title'] = ALG
 json.dump(config, open('./network/%s.json' % KEYWORD, 'w'))
 
