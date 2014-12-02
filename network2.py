@@ -4,10 +4,10 @@ from colors import colors, hex_to_rgb, rgbs
 # http://igraph.org/python/doc/igraph.GraphBase-class.html
 
 import igraph
-g = igraph.Graph.Read_Ncol('edgelist_nu.txt', directed=False)
+g = igraph.Graph.Read_Ncol('edgelist_greek.txt', directed=False)
 
 mapping = {}
-with open("nodes_nu.txt") as f:
+with open("nodes_greek.txt") as f:
 	for row in f.read().splitlines():
 		mapping[row.split()[0]] = row.decode('utf-8', 'ignore').encode('ascii', 'ignore')
 
@@ -17,11 +17,11 @@ g.simplify()
 igraph.summary(g)
 # http://stackoverflow.com/questions/9471906/what-are-the-differences-between-community-detection-algorithms-in-igraph
 # comms = g.community_edge_betweenness(directed=False).as_clustering()
-# comms = g.community_fastgreedy().as_clustering()
-# comms = g.community_infomap().as_clustering()
+comms = g.community_fastgreedy().as_clustering()
+# comms = g.community_infomap()
 # comms = g.community_label_propagation().as_clustering()
 # comms = g.community_leading_eigenvector().as_clustering()
-comms = g.community_multilevel() # louvain
+# comms = g.community_multilevel() # louvain
 # comms = g.community_optimal_modularity().as_clustering()
 # comms = g.community_spinglass().as_clustering()
 # comms = g.community_walktrap().as_clustering()
@@ -43,11 +43,5 @@ for node in G.nodes(data=True):
 	node[1]['viz'] = eval(node[1]['viz'])
 nx.write_gexf(G, './network/data/facebook.gexf')
 
-import http.server
-import socketserver
-PORT = 8000
-Handler = http.server.SimpleHTTPRequestHandler
-httpd = socketserver.TCPServer(("", PORT), Handler)
-print("serving at port", PORT)
+print "python -m SimpleHTTPServer"
 print "http://localhost:8000/network/?config=config_fb.json"
-httpd.serve_forever()
