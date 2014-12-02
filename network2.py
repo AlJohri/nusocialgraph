@@ -1,9 +1,13 @@
-import json, os
+import json, os, sys
 from colors import colors, hex_to_rgb, rgbs
 
 # http://igraph.org/python/doc/igraph.GraphBase-class.html
 
-KEYWORD = "asian"
+KEYWORD = sys.argv[1] #"cultural"
+ALG = sys.argv[2] #"infomap"
+
+print KEYWORD
+print ALG
 
 if os.path.isfile('edgelist_%s.txt' % KEYWORD): os.remove('edgelist_%s.txt' % KEYWORD)
 if os.path.isfile('nodes_%s.txt' % KEYWORD): os.remove('nodes_%s.txt' % KEYWORD)
@@ -25,15 +29,20 @@ g.simplify()
 igraph.summary(g)
 # http://stackoverflow.com/questions/9471906/what-are-the-differences-between-community-detection-algorithms-in-igraph
 
+if ALG == "infomap":
+	comms = g.community_infomap() # 12
+elif ALG == "fastgreedy":
+	comms = g.community_fastgreedy().as_clustering() # CNM 4
+elif ALG == "multilevel":
+	comms = g.community_multilevel() # louvain, 5
+
 # comms = g.community_edge_betweenness(directed=False).as_clustering() # TOO SLOW
-# comms = g.community_fastgreedy().as_clustering() # 4
-comms = g.community_infomap() # 12
 # comms = g.community_label_propagation()  # too few communities?
 # comms = g.community_leading_eigenvector() # 5
-# comms = g.community_multilevel() # louvain, 5
 # comms = g.community_optimal_modularity() # too slow?
 # comms = g.community_spinglass().as_clustering()
 # comms = g.community_walktrap().as_clustering()
+
 print len(comms), "communities found"
 print "calculating positions via fruchterman reingold"
 pos = g.layout_grid_fruchterman_reingold()
@@ -59,6 +68,7 @@ print "write to gefx from networkx"
 nx.write_gexf(G, './network/data/%s.gexf' % KEYWORD)
 config = json.load(open("./network/sample.json"))
 config['data'] = 'data/%s.gexf' % KEYWORD
+config['text']['title'] = ALG
 json.dump(config, open('./network/%s.json' % KEYWORD, 'w'))
 
 print "done!"
