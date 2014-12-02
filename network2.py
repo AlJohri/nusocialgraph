@@ -59,6 +59,6 @@ print "write to gefx from networkx"
 nx.write_gexf(G, './network/data/%s.gexf' % KEYWORD)
 config = json.load(open("./network/sample.json"))
 config['data'] = 'data/%s.gexf' % KEYWORD
-json.dump(config, open('./network/data/%s.json' % KEYWORD, 'w'))
+json.dump(config, open('./network/%s.json' % KEYWORD, 'w'))
 
 print "done!"
