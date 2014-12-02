@@ -7,7 +7,7 @@
     <nodes>
       <node id="0" label="2906348 Robby Findler">
         <ns0:color b="180" g="119" r="31" />
-        <ns0:position x="-11.5991752085" y="-6.28987405616" z="None" />
+        <ns0:position x="-7.25966229566" y="8.50389195548" z="None" />
         <attvalues>
           <attvalue for="0" value="2906348" />
           <attvalue for="1" value="2906348" />
@@ -15,7 +15,7 @@
       </node>
       <node id="1" label="100000785604959 Sean Eecs">
         <ns0:color b="180" g="119" r="31" />
-        <ns0:position x="-11.3213466831" y="-12.3753881669" z="None" />
+        <ns0:position x="-12.5938081133" y="5.55619659909" z="None" />
         <attvalues>
           <attvalue for="0" value="100000785604959" />
           <attvalue for="1" value="100000785604959" />
@@ -23,7 +23,7 @@
       </node>
       <node id="2" label="5744065 Ermin Wei">
         <ns0:color b="180" g="119" r="31" />
-        <ns0:position x="-16.8762885061" y="-11.1998491346" z="None" />
+        <ns0:position x="-10.3847259937" y="11.5231925622" z="None" />
         <attvalues>
           <attvalue for="0" value="5744065" />
           <attvalue for="1" value="5744065" />
@@ -31,7 +31,7 @@
       </node>
       <node id="3" label="518719620 Kristian J Hammond">
         <ns0:color b="14" g="127" r="255" />
-        <ns0:position x="-6.46503252217" y="-11.9412143757" z="None" />
+        <ns0:position x="-19.0246213056" y="4.92726958267" z="None" />
         <attvalues>
           <attvalue for="0" value="518719620" />
           <attvalue for="1" value="518719620" />
@@ -39,7 +39,7 @@
       </node>
       <node id="4" label="635138993 Ken Forbus">
         <ns0:color b="14" g="127" r="255" />
-        <ns0:position x="-5.57848054883" y="-13.7822899874" z="None" />
+        <ns0:position x="-15.4238635002" y="4.60363748422" z="None" />
         <attvalues>
           <attvalue for="0" value="635138993" />
           <attvalue for="1" value="635138993" />
@@ -47,7 +47,7 @@
       </node>
       <node id="5" label="676138558 Fabian E. Bustamante">
         <ns0:color b="14" g="127" r="255" />
-        <ns0:position x="-8.20380907236" y="-13.7835769281" z="None" />
+        <ns0:position x="-14.8015928462" y="6.40473403388" z="None" />
         <attvalues>
           <attvalue for="0" value="676138558" />
           <attvalue for="1" value="676138558" />
@@ -55,7 +55,7 @@
       </node>
       <node id="6" label="100000165654362 Christopher Riesbeck">
         <ns0:color b="14" g="127" r="255" />
-        <ns0:position x="-7.58667878512" y="-16.0148702942" z="None" />
+        <ns0:position x="-16.9689549142" y="6.859706039" z="None" />
         <attvalues>
           <attvalue for="0" value="100000165654362" />
           <attvalue for="1" value="100000165654362" />
@@ -63,7 +63,7 @@
       </node>
       <node id="7" label="541057630 Gokhan Memik">
         <ns0:color b="180" g="119" r="31" />
-        <ns0:position x="-12.8125406222" y="-9.3313449142" z="None" />
+        <ns0:position x="-7.52592714211" y="4.0409610404" z="None" />
         <attvalues>
           <attvalue for="0" value="541057630" />
           <attvalue for="1" value="541057630" />
@@ -71,7 +71,7 @@
       </node>
       <node id="8" label="656059242 Russ Joseph">
         <ns0:color b="180" g="119" r="31" />
-        <ns0:position x="-10.7504646678" y="-10.6656218638" z="None" />
+        <ns0:position x="-11.0673631272" y="7.10286085217" z="None" />
         <attvalues>
           <attvalue for="0" value="656059242" />
           <attvalue for="1" value="656059242" />
@@ -79,7 +79,7 @@
       </node>
       <node id="9" label="1287980459 Ming-Yang Kao">
         <ns0:color b="180" g="119" r="31" />
-        <ns0:position x="-8.34880849047" y="-9.61739275808" z="None" />
+        <ns0:position x="-10.9888761719" y="4.06425808543" z="None" />
         <attvalues>
           <attvalue for="0" value="1287980459" />
           <attvalue for="1" value="1287980459" />
@@ -87,7 +87,7 @@
       </node>
       <node id="10" label="100002934664379 Koray Aydin">
         <ns0:color b="180" g="119" r="31" />
-        <ns0:position x="-15.5959522206" y="-8.30100802015" z="None" />
+        <ns0:position x="-7.70413123725" y="1.02630820788" z="None" />
         <attvalues>
           <attvalue for="0" value="100002934664379" />
           <attvalue for="1" value="100002934664379" />
@@ -95,7 +95,7 @@
       </node>
       <node id="11" label="602811375 Don Norman">
         <ns0:color b="14" g="127" r="255" />
-        <ns0:position x="-9.84603760924" y="-15.0433922204" z="None" />
+        <ns0:position x="-15.6198684167" y="9.07200765247" z="None" />
         <attvalues>
           <attvalue for="0" value="602811375" />
           <attvalue for="1" value="602811375" />
@@ -103,7 +103,7 @@
       </node>
       <node id="12" label="1041994554 Uri Wilensky">
         <ns0:color b="14" g="127" r="255" />
-        <ns0:position x="-5.48825931175" y="-17.1980466731" z="None" />
+        <ns0:position x="-19.2103416509" y="7.15341776129" z="None" />
         <attvalues>
           <attvalue for="0" value="1041994554" />
           <attvalue for="1" value="1041994554" />
@@ -111,7 +111,7 @@
       </node>
       <node id="13" label="669207829 Ian Horswill">
         <ns0:color b="14" g="127" r="255" />
-        <ns0:position x="-7.49202336938" y="-18.8486124078" z="None" />
+        <ns0:position x="-18.6479303713" y="2.71527897049" z="None" />
         <attvalues>
           <attvalue for="0" value="669207829" />
           <attvalue for="1" value="669207829" />
@@ -119,7 +119,7 @@
       </node>
       <node id="14" label="1574290826 Jason Hartline">
         <ns0:color b="180" g="119" r="31" />
-        <ns0:position x="-5.27813480459" y="-9.32280182044" z="None" />
+        <ns0:position x="-11.6432644701" y="2.19683986882" z="None" />
         <attvalues>
           <attvalue for="0" value="1574290826" />
           <attvalue for="1" value="1574290826" />
@@ -127,7 +127,7 @@
       </node>
       <node id="15" label="1003600473 Peter Dinda">
         <ns0:color b="14" g="127" r="255" />
-        <ns0:position x="-10.8371324745" y="-16.7161788317" z="None" />
+        <ns0:position x="-15.2554824378" y="2.7274682803" z="None" />
         <attvalues>
           <attvalue for="0" value="1003600473" />
           <attvalue for="1" value="1003600473" />
@@ -135,7 +135,7 @@
       </node>
       <node id="16" label="1311830972 Hai Zhou">
         <ns0:color b="180" g="119" r="31" />
-        <ns0:position x="-8.24108131718" y="-7.15498317933" z="None" />
+        <ns0:position x="-8.76152939326" y="5.62431503889" z="None" />
         <attvalues>
           <attvalue for="0" value="1311830972" />
           <attvalue for="1" value="1311830972" />
@@ -143,7 +143,7 @@
       </node>
       <node id="17" label="692395720 Aravindan Vijayaraghavan">
         <ns0:color b="180" g="119" r="31" />
-        <ns0:position x="-14.0875539758" y="-13.6525061327" z="None" />
+        <ns0:position x="-13.6386634068" y="10.7652896461" z="None" />
         <attvalues>
           <attvalue for="0" value="692395720" />
           <attvalue for="1" value="692395720" />
@@ -151,7 +151,7 @@
       </node>
       <node id="18" label="100000227031268 Alan Sahakian">
         <ns0:color b="180" g="119" r="31" />
-        <ns0:position x="-17.0280352187" y="-15.6624552165" z="None" />
+        <ns0:position x="-15.3556081574" y="-0.308385700464" z="None" />
         <attvalues>
           <attvalue for="0" value="100000227031268" />
           <attvalue for="1" value="100000227031268" />
@@ -159,7 +159,7 @@
       </node>
       <node id="19" label="100003152597043 Dongning Guo">
         <ns0:color b="180" g="119" r="31" />
-        <ns0:position x="-13.2521090594" y="-18.0454925271" z="None" />
+        <ns0:position x="-11.7810495038" y="-0.814615041936" z="None" />
         <attvalues>
           <attvalue for="0" value="100003152597043" />
           <attvalue for="1" value="100003152597043" />
