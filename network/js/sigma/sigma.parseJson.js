@@ -22,8 +22,8 @@ sigma.publicPrototype.parseJson = function(jsonPath,callback) {
 
 			sigmaInstance.addEdge(eid,source,target,edgeNode);
 		}
-		
+
 		if (callback) callback.call(this);//Trigger the data ready function
-	
+
 	});//end jquery getJSON function
 };//end sigma.parseJson function

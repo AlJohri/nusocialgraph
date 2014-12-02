@@ -44,43 +44,43 @@ sigma.publicPrototype.parseGexf = function(gexfPath,callback) {
       var attributeNodes = attributesNode.getElementsByTagName('attribute');  // The list of xml nodes 'attribute' (no 's')
       for(j = 0; j<attributeNodes.length; j++){
         var attributeNode = attributeNodes[j];  // Each xml node 'attribute'
-        
+
         var id = attributeNode.getAttribute('id'),
           title = attributeNode.getAttribute('title'),
           type = attributeNode.getAttribute('type');
-          
+
         var attribute = {id:id, title:title, type:type};
         edgesAttributes.push(attribute);
         edgesAttributesDict[id] = title
-        
+
       }
     }
   }
-  
+
   var nodes = []; // The nodes of the graph
   var nodesNodes = gexf.getElementsByTagName('nodes') // The list of xml nodes 'nodes' (plural)
-  
+
   for(i=0; i<nodesNodes.length; i++){
     var nodesNode = nodesNodes[i];  // Each xml node 'nodes' (plural)
     var nodeNodes = nodesNode.getElementsByTagName('node'); // The list of xml nodes 'node' (no 's')
 
     for(j=0; j<nodeNodes.length; j++){
       var nodeNode = nodeNodes[j];  // Each xml node 'node' (no 's')
-      
+
       window.NODE = nodeNode;
 
       var id = nodeNode.getAttribute('id');
       var label = nodeNode.getAttribute('label') || id;
-      
+
       //viz
       var size = 1;
       var x = 100 - 200*Math.random();
       var y = 100 - 200*Math.random();
       var color;
-      
+
       var sizeNodes = nodeNode.getElementsByTagName('size');
-      sizeNodes = sizeNodes.length ? 
-                  sizeNodes : 
+      sizeNodes = sizeNodes.length ?
+                  sizeNodes :
                   nodeNode.getElementsByTagNameNS('*','size');
       if(sizeNodes.length>0){
         sizeNode = sizeNodes[0];
@@ -88,8 +88,8 @@ sigma.publicPrototype.parseGexf = function(gexfPath,callback) {
       }
 
       var positionNodes = nodeNode.getElementsByTagName('position');
-      positionNodes = positionNodes.length ? 
-                      positionNodes : 
+      positionNodes = positionNodes.length ?
+                      positionNodes :
                       nodeNode.getElementsByTagNameNS('*','position');
       if(positionNodes.length>0){
         var positionNode = positionNodes[0];
@@ -98,8 +98,8 @@ sigma.publicPrototype.parseGexf = function(gexfPath,callback) {
       }
 
       var colorNodes = nodeNode.getElementsByTagName('color');
-      colorNodes = colorNodes.length ? 
-                   colorNodes : 
+      colorNodes = colorNodes.length ?
+                   colorNodes :
                    nodeNode.getElementsByTagNameNS('*','color');
       if(colorNodes.length>0){
         colorNode = colorNodes[0];
@@ -107,10 +107,10 @@ sigma.publicPrototype.parseGexf = function(gexfPath,callback) {
                                          parseFloat(colorNode.getAttribute('g')),
                                          parseFloat(colorNode.getAttribute('b')));
       }
-      
+
       // Create Node
       var node = {label:label, size:size, x:x, y:y, attributes:{}, color:color};  // The graph node
-      
+
       // Attribute values
       var attvalueNodes = nodeNode.getElementsByTagName('attvalue');
       for(k=0; k<attvalueNodes.length; k++){
