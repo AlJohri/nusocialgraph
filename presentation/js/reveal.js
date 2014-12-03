@@ -2598,15 +2598,22 @@
 		var background = getSlideBackground( indices.h, indices.v );
 		if( background ) {
 			background.style.display = 'block';
-			document.querySelector('.reveal > .backgrounds').style['z-index'] = 0;
+
+			var backgroundImage = slide.getAttribute( 'data-background-image' ),
+				backgroundVideo = slide.getAttribute( 'data-background-video' ),
+				backgroundIframe = slide.getAttribute( 'data-background-iframe' );
+
+			// regardless of whether the background contains media
+			if (backgroundIframe) {
+				document.querySelector('.reveal > .backgrounds').style['z-index'] = 1;
+			}
+			else {
+				document.querySelector('.reveal > .backgrounds').style['z-index'] = 0;
+			}
 
 			// If the background contains media, load it
 			if( background.hasAttribute( 'data-loaded' ) === false ) {
 				background.setAttribute( 'data-loaded', 'true' );
-
-				var backgroundImage = slide.getAttribute( 'data-background-image' ),
-					backgroundVideo = slide.getAttribute( 'data-background-video' ),
-					backgroundIframe = slide.getAttribute( 'data-background-iframe' );
 
 				// Images
 				if( backgroundImage ) {
@@ -2634,7 +2641,6 @@
 
 					background.appendChild( iframe );
 					background.style['z-index'] = 1;
-					document.querySelector('.reveal > .backgrounds').style['z-index'] = 1;
 				}
 			}
 		}
