@@ -2598,6 +2598,7 @@
 		var background = getSlideBackground( indices.h, indices.v );
 		if( background ) {
 			background.style.display = 'block';
+			document.querySelector('.reveal > .backgrounds').style['z-index'] = 0;
 
 			// If the background contains media, load it
 			if( background.hasAttribute( 'data-loaded' ) === false ) {
@@ -2632,6 +2633,8 @@
 						iframe.style.maxWidth = '100%';
 
 					background.appendChild( iframe );
+					background.style['z-index'] = 1;
+					document.querySelector('.reveal > .backgrounds').style['z-index'] = 1;
 				}
 			}
 		}

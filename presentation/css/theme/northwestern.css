@@ -178,8 +178,19 @@ body {
   -moz-transition: border 500ms ease-out;
   -o-transition: border 500ms ease-out; }
 
+/********************************************
+  * CONTROLS
+ ********************************************/
+
+.reveal .controls {
+  right: 30px;
+}
+
+/* this is now implemented in javascript
+   https://github.com/hakimel/reveal.js/pull/1029#issuecomment-65373274
+*/
 /*********************************************
  * IFRAME FIX
  *********************************************/
-.reveal > .backgrounds { z-index: 1; }
-.reveal .slide-background.present { z-index: 1; }
+/*.reveal > .backgrounds { z-index: 1; }*/
+/*.reveal .slide-background.present { z-index: 1; }*/
